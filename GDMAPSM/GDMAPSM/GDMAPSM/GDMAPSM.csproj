@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD3E6BBE-A871-4CA7-945E-693F24D26288}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GDMAPSM</RootNamespace>
+    <AssemblyName>GDMAPSM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>dll\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectSharedFolders.cs" />
+    <Compile Include="打印\PrintBABForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="打印\PrintBABForm.Designer.cs">
+      <DependentUpon>PrintBABForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="打印\SelecBBLCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="打印\SelecBBLCForm.Designer.cs">
+      <DependentUpon>SelecBBLCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\AddPCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\AddPCForm.Designer.cs">
+      <DependentUpon>AddPCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\AddYPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\AddYPForm.Designer.cs">
+      <DependentUpon>AddYPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCDetail.Designer.cs">
+      <DependentUpon>PCDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCListForm.Designer.cs">
+      <DependentUpon>PCListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record.Designer.cs">
+      <DependentUpon>Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YPDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YPDetailForm.Designer.cs">
+      <DependentUpon>YPDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\AddForm_BBLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\AddForm_BBLC.Designer.cs">
+      <DependentUpon>AddForm_BBLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\AddModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\AddModelForm.Designer.cs">
+      <DependentUpon>AddModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\BBLC_ListModel_BL_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\BBLC_ListModel_BL_Form.Designer.cs">
+      <DependentUpon>BBLC_ListModel_BL_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\BBLC_ListModel_DJ_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\BBLC_ListModel_DJ_Form.Designer.cs">
+      <DependentUpon>BBLC_ListModel_DJ_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\BBLC_BAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\BBLC_BAForm.Designer.cs">
+      <DependentUpon>BBLC_BAForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\BBLC_SQForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\BBLC_SQForm.Designer.cs">
+      <DependentUpon>BBLC_SQForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\SelectYPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\SelectYPForm.Designer.cs">
+      <DependentUpon>SelectYPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报备流程\SelectPCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报备流程\SelectPCForm.Designer.cs">
+      <DependentUpon>SelectPCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测绘基地\CHJDFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测绘基地\CHJDFORM.Designer.cs">
+      <DependentUpon>CHJDFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="记录\YPRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="记录\YPRecord.Designer.cs">
+      <DependentUpon>YPRecord.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="打印\PrintBABForm.resx">
+      <DependentUpon>PrintBABForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="打印\SelecBBLCForm.resx">
+      <DependentUpon>SelecBBLCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\AddPCForm.resx">
+      <DependentUpon>AddPCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\AddYPForm.resx">
+      <DependentUpon>AddYPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCDetail.resx">
+      <DependentUpon>PCDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCListForm.resx">
+      <DependentUpon>PCListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Record.resx">
+      <DependentUpon>Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YPDetailForm.resx">
+      <DependentUpon>YPDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\AddForm_BBLC.resx">
+      <DependentUpon>AddForm_BBLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\AddModelForm.resx">
+      <DependentUpon>AddModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\BBLC_ListModel_BL_Form.resx">
+      <DependentUpon>BBLC_ListModel_BL_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\BBLC_ListModel_DJ_Form.resx">
+      <DependentUpon>BBLC_ListModel_DJ_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\BBLC_BAForm.resx">
+      <DependentUpon>BBLC_BAForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\BBLC_SQForm.resx">
+      <DependentUpon>BBLC_SQForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\SelectYPForm.resx">
+      <DependentUpon>SelectYPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报备流程\SelectPCForm.resx">
+      <DependentUpon>SelectPCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测绘基地\CHJDFORM.resx">
+      <DependentUpon>CHJDFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="记录\YPRecord.resx">
+      <DependentUpon>YPRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BLL\BLL.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{e3d8759a-c5eb-402d-9f10-f5c6029a8d1a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DAL\DAL.csproj">
+      <Project>{9fe00521-3a8b-42b1-814e-585e99407b2e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DBUtility\DBUtility.csproj">
+      <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Model.csproj">
+      <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
