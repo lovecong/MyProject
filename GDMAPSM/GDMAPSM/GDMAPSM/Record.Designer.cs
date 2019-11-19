@@ -114,7 +114,7 @@
             // 
             // button_bg
             // 
-            this.button_bg.Location = new System.Drawing.Point(202, 314);
+            this.button_bg.Location = new System.Drawing.Point(171, 323);
             this.button_bg.Name = "button_bg";
             this.button_bg.Size = new System.Drawing.Size(73, 27);
             this.button_bg.TabIndex = 14;
