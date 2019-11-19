@@ -51,7 +51,7 @@ namespace GDMAPSM
 
         private void comboBox_LX_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //三生三世
         }
     }
 }
