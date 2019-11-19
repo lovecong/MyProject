@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadFlow.Data.MYSQL", "RoadFlow.Data.MYSQL.csproj", "{EFCD6A7C-C598-4BBD-BDC6-3016AAABD26C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFCD6A7C-C598-4BBD-BDC6-3016AAABD26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCD6A7C-C598-4BBD-BDC6-3016AAABD26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCD6A7C-C598-4BBD-BDC6-3016AAABD26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCD6A7C-C598-4BBD-BDC6-3016AAABD26C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1B98266-B28A-48F2-BDC6-0CA4FDC5324F}
+	EndGlobalSection
+EndGlobal
